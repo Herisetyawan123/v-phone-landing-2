@@ -1,0 +1,249 @@
+
+/* Register Page Specific Styles */
+.page-header {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    padding: 120px 0 40px;
+    color: var(--light-text);
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.register-section {
+    padding: 60px 0;
+    background-color: #121212;
+}
+
+.register-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* Form Benefits Styles */
+.form-benefits {
+    background-color: #252525;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    position: sticky;
+    top: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-benefits h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.benefits-list {
+    margin-bottom: 30px;
+}
+
+.benefits-list li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    color: #a0a0a0;
+}
+
+.benefits-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.testimonial {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    font-style: italic;
+    color: #a0a0a0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.testimonial-author {
+    margin-top: 10px;
+    text-align: right;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--light-text);
+}
+
+/* Registration Form Styles */
+.registration-form {
+    background-color: #252525;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.registration-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--light-text);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #333;
+    background-color: #1a1a1a;
+    color: var(--light-text);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-label, .checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.radio-label input, .checkbox-label input {
+    margin-right: 8px;
+}
+
+.checkbox-group {
+    margin-top: 30px;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    min-height: 17px;
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-message.success {
+    background-color: rgba(46, 125, 50, 0.2);
+    color: #69f0ae;
+    display: block;
+    border: 1px solid rgba(105, 240, 174, 0.3);
+}
+
+.form-message.error {
+    background-color: rgba(198, 40, 40, 0.2);
+    color: #ff6b6b;
+    display: block;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+/* Password Strength Meter */
+.password-strength-meter {
+    margin-top: 10px;
+}
+
+.strength-bar {
+    height: 5px;
+    background-color: #333;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.strength-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-bar.weak::after {
+    width: 33%;
+    background-color: #ff5252;
+}
+
+.strength-bar.medium::after {
+    width: 66%;
+    background-color: #ffab40;
+}
+
+.strength-bar.strong::after {
+    width: 100%;
+    background-color: #69f0ae;
+}
+
+.strength-text {
+    font-size: 0.8rem;
+    color: #777777;
+}
+
+@media screen and (max-width: 992px) {
+    .register-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-benefits {
+        position: static;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .registration-form {
+        padding: 30px 20px;
+    }
+}

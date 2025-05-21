@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - V-Phone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="register.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>V-Phone</h1>
+            </div>
+            <nav>
+                <div class="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="promotions.html">Promotions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="register.html" class="active btn-register">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Create an Account</h1>
+                <p>Join the V-Phone community and unlock exclusive benefits</p>
+            </div>
+        </section>
+
+        <section class="register-section">
+            <div class="container">
+                <div class="register-container">
+                    <div class="form-benefits">
+                        <h2>Benefits of Registration</h2>
+                        <ul class="benefits-list">
+                            <li>Access to exclusive promotions and discounts</li>
+                            <li>Early notifications about new product releases</li>
+                            <li>Personalized product recommendations</li>
+                            <li>Faster checkout for future purchases</li>
+                            <li>Join our loyalty program to earn points</li>
+                        </ul>
+                        <div class="testimonial">
+                            <p>"Registering with V-Phone was the best decision I made. Their loyalty program has saved me hundreds of dollars on my purchases!"</p>
+                            <div class="testimonial-author">- Maria K., V-Phone Customer</div>
+                        </div>
+                    </div>
+                    <div class="registration-form">
+                        <h2>Register Now</h2>
+                        <form id="registerForm">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                                <div class="error-message" id="fullNameError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="gender" value="male" required>
+                                        <span>Male</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="gender" value="female">
+                                        <span>Female</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="gender" value="other">
+                                        <span>Other</span>
+                                    </label>
+                                </div>
+                                <div class="error-message" id="genderError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" required>
+                                <div class="error-message" id="passwordError"></div>
+                                <div class="password-strength-meter">
+                                    <div class="strength-bar"></div>
+                                    <span class="strength-text">Password Strength</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                <div class="error-message" id="confirmPasswordError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select id="country" name="country" required>
+                                    <option value="">Select your country</option>
+                                    <option value="us">United States</option>
+                                    <option value="ca">Canada</option>
+                                    <option value="uk">United Kingdom</option>
+                                    <option value="au">Australia</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="error-message" id="countryError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Additional Comments</label>
+                                <textarea id="message" name="message" rows="3"></textarea>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <span>I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></span>
+                                </label>
+                                <div class="error-message" id="termsError"></div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-large">Create Account</button>
+                        </form>
+                        <div class="form-message" id="formMessage"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>V-Phone</h3>
+                    <p>Innovative smartphones designed for gaming, photography, and everyday use at competitive prices.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@vphone.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook"></a>
+                        <a href="#" class="social-icon twitter"></a>
+                        <a href="#" class="social-icon instagram"></a>
+                        <a href="#" class="social-icon youtube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 V-Phone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>
